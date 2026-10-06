@@ -1,0 +1,67 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "2e535277-c7a6-4801-8fe5-34dcd5452af4",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1292502420621017",
+        "recipientPhoneNumber": "=+919384132606",
+        "textBody": "Wake Up",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "2e089095-8b84-48dd-b95c-49b346bd99ec",
+      "name": "Send message",
+      "webhookId": "30fb4d87-a686-4308-97e6-54a2bb7ee86b",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "f5zUqJVjKDJMmFjx",
+          "name": "WhatsApp account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "baacbc6f-1278-4a5f-9c44-daef54a7110c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c6e145cd901d3389f371ac1837bf8ca77ae2dd6064689265153ce93956f22b7e"
+  },
+  "nodeGroups": [],
+  "id": "MmwiTblYrmNNlUAO",
+  "tags": []
+}
